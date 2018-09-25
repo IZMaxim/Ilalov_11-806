@@ -12,10 +12,11 @@ public class Homework06_1 {
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n - 1 - i; j++) {
-                if (s[j].length() > s[j + 1].length()) ;
-                String buf = s[j];
-                s[j] = s[j + 1];
-                s[j + 1] = buf;
+                if (s[j].length() > s[j + 1].length()) {
+                    String buf = s[j];
+                    s[j] = s[j + 1];
+                    s[j + 1] = buf;
+                }
             }
         }
         for (String k : s) {
