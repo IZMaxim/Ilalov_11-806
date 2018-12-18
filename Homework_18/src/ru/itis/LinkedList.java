@@ -36,14 +36,14 @@ public class LinkedList<T> implements MyLinkedList {
     }
 
     @Override
-    public Node get(int position) {
+    public Node<T> get(int position) {
         int count = 0;
         Node currentNode = header;
         while (count < position) {
             currentNode = currentNode.getNext();
             count++;
         }
-        return currentNode;
+        return (Node<T>) currentNode.getValue();
     }
 
     @Override
@@ -52,7 +52,7 @@ public class LinkedList<T> implements MyLinkedList {
     }
 
     @Override
-    public Node[] toArray() {
+    public Node<T>[] toArray() {
         Node[] nodeArray = new Node[size];
         int i = 0;
         Iterator<Node<T>> nodeIterator = getIterator();
